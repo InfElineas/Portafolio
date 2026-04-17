@@ -1,3 +1,5 @@
+import { ContactForm } from "@/components/contact/contact-form";
+
 const contactLinks = [
   { href: "mailto:jasanbadelldev@gmail.com", label: "Email" },
   { href: "https://www.linkedin.com/in/jasanbadelldev", label: "LinkedIn" },
@@ -27,6 +29,8 @@ export default function ContactPage() {
         </p>
         <p>Tiempo estimado de respuesta: 24-48 horas.</p>
       </article>
+
+      <ContactForm />
 
       <div className="link-row">
         {contactLinks.map((link) => (

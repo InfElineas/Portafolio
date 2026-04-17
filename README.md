@@ -173,3 +173,13 @@ Se convirtió la sección de proyectos a modelo **data-driven**:
 - Rutas dinámicas de detalle en `app-next/src/app/projects/[slug]/page.tsx`.
 
 Esto deja la base lista para conectar CMS/API sin reescribir componentes.
+
+
+## Migración a Next.js (Fase 5)
+
+Se añadió la base para funcionalidades futuras:
+
+- API route de contacto en `app-next/src/app/api/contact/route.ts` con validación y rate limiting básico.
+- Formulario de contacto cliente en `app-next/src/components/contact/contact-form.tsx` conectado a `/api/contact`.
+- Capa de validación reutilizable en `app-next/src/lib/contact-validation.ts`.
+- Preparación auth-ready con `app-next/src/middleware.ts` (rutas protegibles `/admin` y `/dashboard`).
