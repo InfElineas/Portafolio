@@ -141,3 +141,13 @@ cd app-next
 npm install
 npm run dev
 ```
+
+
+## Migración a Next.js (Paso 2)
+
+La home de Next (`app-next/src/app/page.tsx`) ya está migrada con:
+
+- hero principal con copy actualizado,
+- CTAs de navegación,
+- bloque de enlaces sociales,
+- estilos responsive específicos en `app-next/src/app/globals.css`.
