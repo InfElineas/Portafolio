@@ -110,3 +110,15 @@ El proyecto ya está preparado para GA4. Debes reemplazar el Measurement ID plac
 - Revisar enlaces externos trimestralmente.
 - Actualizar librerías de terceros (Typed.js/yall.js) periódicamente.
 - Pasar Lighthouse antes de cada release.
+
+## Documento de contexto para actualizar tu CV con ChatGPT
+
+Se añadió el archivo `CV_CHATGPT_CONTEXT.md` con:
+
+- perfil profesional actualizado,
+- stack y fortalezas,
+- proyectos actuales con enlaces,
+- prompt recomendado para generar CV y resumen de LinkedIn,
+- checklist de datos faltantes para cerrar versión final.
+
+Úsalo como base al pedirle a ChatGPT una versión ATS-friendly de tu currículum.
