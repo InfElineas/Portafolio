@@ -9,18 +9,22 @@ Este repositorio ahora usa **Next.js + TypeScript** como base principal en `app-
 
 ## Ejecutar en local
 
+Desde la raíz del repo:
+
 ```bash
-cd app-next
-npm install
+npm run install:app
 npm run dev
 ```
 
 Luego abre: `http://localhost:3000`
 
+> También puedes entrar a `app-next/` y ejecutar los comandos directamente, si lo prefieres.
+
 ## Scripts principales
 
-Desde `app-next/`:
+Desde la raíz del repo (delegan a `app-next/`):
 
+- `npm run install:app` — instala dependencias de `app-next`.
 - `npm run dev` — desarrollo local.
 - `npm run lint` — lint con reglas Next.
 - `npm run typecheck` — chequeo de tipos TypeScript.
@@ -70,3 +74,11 @@ Se incluyen:
 ## Contexto para CV
 
 `CV_CHATGPT_CONTEXT.md` contiene contexto + prompt para actualizar tu CV y perfil LinkedIn con tus proyectos actuales.
+
+## Menos conflictos en próximos cambios
+
+Para evitar que reaparezcan conflictos con el sitio viejo, sigue la estrategia en:
+
+- `REPO_CLEANUP_STRATEGY.md`
+
+Resumen: una sola fuente de verdad (`app-next/`), sin reintroducir archivos legacy, y PRs pequeños por tema.

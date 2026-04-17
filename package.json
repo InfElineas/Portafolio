@@ -1,0 +1,12 @@
+{
+  "name": "portafolio-workspace",
+  "private": true,
+  "scripts": {
+    "install:app": "npm --prefix app-next install",
+    "dev": "npm --prefix app-next run dev",
+    "lint": "npm --prefix app-next run lint",
+    "typecheck": "npm --prefix app-next run typecheck",
+    "build": "npm --prefix app-next run build",
+    "check": "npm --prefix app-next run check"
+  }
+}
