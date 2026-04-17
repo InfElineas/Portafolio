@@ -162,3 +162,14 @@ Se migraron las vistas principales en `app-next/src/app`:
 - `/contact` con copy de colaboración y canales de contacto.
 
 Además, se añadieron estilos reutilizables para estas secciones en `app-next/src/app/globals.css`.
+
+
+## Migración a Next.js (Fase 4)
+
+Se convirtió la sección de proyectos a modelo **data-driven**:
+
+- Fuente única en `app-next/src/data/projects.ts`.
+- Listado dinámico en `app-next/src/app/projects/page.tsx`.
+- Rutas dinámicas de detalle en `app-next/src/app/projects/[slug]/page.tsx`.
+
+Esto deja la base lista para conectar CMS/API sin reescribir componentes.

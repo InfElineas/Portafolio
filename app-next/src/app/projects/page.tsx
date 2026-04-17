@@ -1,32 +1,5 @@
-const projects = [
-  {
-    title: "Scholeía",
-    description:
-      "Plataforma educativa orientada a formación online, con foco en experiencia de navegación y claridad de contenidos.",
-    tags: ["UX writing", "Responsive UI", "SEO on-page"],
-    links: [
-      { href: "/proyect_description/scholeia.html", label: "Ver detalle" },
-      { href: "https://xn--scholea-dza.com/", label: "Live Demo" },
-    ],
-  },
-  {
-    title: "HitMeUp",
-    description:
-      "App de mensajería en tiempo real con arquitectura cloud y enfoque en interacción simple para usuarios finales.",
-    tags: ["React", "Real-time chat", "Cloud APIs"],
-    links: [
-      { href: "/proyect_description/hitmeup.html", label: "Ver detalle" },
-      {
-        href: "https://github.com/JasanBadell/ChatApp-HitMeUp/tree/main",
-        label: "Código",
-      },
-      {
-        href: "https://main--stupendous-dieffenbachia-0d305a.netlify.app/",
-        label: "Live Demo",
-      },
-    ],
-  },
-];
+import Link from "next/link";
+import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
@@ -36,9 +9,15 @@ export default function ProjectsPage() {
 
       <div className="card-stack">
         {projects.map((project) => (
-          <article key={project.title} className="panel project-card-next">
-            <h2 className="section-title">{project.title}</h2>
-            <p className="page-copy">{project.description}</p>
+          <article key={project.slug} className="panel project-card-next">
+            <div className="project-card-next__header">
+              <h2 className="section-title">{project.title}</h2>
+              <span className={`status-pill status-pill--${project.status}`}>
+                {project.status === "active" ? "Activo" : "En revisión"}
+              </span>
+            </div>
+
+            <p className="page-copy">{project.summary}</p>
 
             <div className="chip-list">
               {project.tags.map((tag) => (
@@ -49,11 +28,16 @@ export default function ProjectsPage() {
             </div>
 
             <div className="link-row">
-              {project.links.map((link) => (
-                <a key={link.href} href={link.href} className="next-home__btn" target="_blank" rel="noreferrer">
-                  {link.label}
-                </a>
-              ))}
+              <Link href={`/projects/${project.slug}`} className="next-home__btn">
+                Ver detalle
+              </Link>
+              {project.links
+                .filter((link) => link.external)
+                .map((link) => (
+                  <a key={link.href} href={link.href} className="next-home__btn" target="_blank" rel="noreferrer">
+                    {link.label}
+                  </a>
+                ))}
             </div>
           </article>
         ))}
