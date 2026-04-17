@@ -1,8 +1,8 @@
 var typed = new Typed(".typed", {
   strings: [
-    `<b class="text-green">Front-End</b>`,
-    `<b class="text-green"> Web Designer</b>`,
-    `<b class="text-green">Web Developer</b>`,
+    `<b class="text-green">Frontend Engineer</b>`,
+    `<b class="text-green">especialista en UX</b>`,
+    `<b class="text-green">enfocado en performance</b>`,
   ],
   stringsElement: "#cadenas-texto",
   typeSpeed: 75,
