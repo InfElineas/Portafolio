@@ -122,3 +122,22 @@ Se añadió el archivo `CV_CHATGPT_CONTEXT.md` con:
 - checklist de datos faltantes para cerrar versión final.
 
 Úsalo como base al pedirle a ChatGPT una versión ATS-friendly de tu currículum.
+
+
+## Migración a Next.js (Paso 1)
+
+Se inicializó una base de aplicación en `app-next/` con:
+
+- Next.js (App Router)
+- TypeScript
+- ESLint
+- Layout global con Header/Footer
+- Rutas iniciales: `/`, `/about`, `/projects`, `/contact`
+
+Para ejecutar cuando tengas dependencias instaladas:
+
+```bash
+cd app-next
+npm install
+npm run dev
+```
