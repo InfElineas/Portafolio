@@ -1,23 +1,34 @@
 "use strict";
 
-$(document).ready(function () {
-  $("body").on({
-    mousemove: function (e) {
-      console.clear();
-      let clientX = e.originalEvent.clientX;
-      let clientY = e.originalEvent.clientY;
-      $("#cursor").css({
-        left: clientX - 40 + "px",
-        top: clientY - 40 + "px",
+document.addEventListener("DOMContentLoaded", () => {
+  const cursor = document.getElementById("cursor");
+
+  if (cursor) {
+    document.body.addEventListener("mousemove", (event) => {
+      cursor.style.left = `${event.clientX - 14}px`;
+      cursor.style.top = `${event.clientY - 14}px`;
+    });
+
+    const interactiveElements = document.querySelectorAll("a, button");
+    interactiveElements.forEach((element) => {
+      element.addEventListener("mouseenter", () => {
+        cursor.classList.add("mini");
       });
-    },
-  });
-  $(".a").on({
-    mouseover: function () {
-      $("#cursor").addClass(mini);
-    },
-    mouseout: function () {
-      $("#cursor").removeClass(mini);
-    },
-  });
+      element.addEventListener("mouseleave", () => {
+        cursor.classList.remove("mini");
+      });
+    });
+  }
+
+  const mobileTouchArea = document.querySelector(".mt-area");
+  if (mobileTouchArea) {
+    mobileTouchArea.addEventListener("click", () => {
+      document.querySelectorAll(".t-mobile-f").forEach((element) => {
+        element.classList.toggle("is-hidden");
+      });
+      document.querySelectorAll(".t-mobile-s").forEach((element) => {
+        element.classList.toggle("is-hidden");
+      });
+    });
+  }
 });

@@ -12,7 +12,6 @@ body {
   margin: 0;
   font-size: calc(1em + 1vw);
   margin-bottom: 2em;
-  /* cursor: none; */
 }
 
 /* Fondos */
@@ -160,7 +159,6 @@ a:visited {
   text-decoration: none;
   cursor: pointer;
   color: black;
-  /* cursor: none; */
 }
 
 a.text-green,
@@ -296,9 +294,6 @@ img {
   }
 }
 
-/* .skills-logs:hover {
-} */
-
 .line-green {
   margin-bottom: 2%;
   border: 1px solid #77d970;
@@ -320,15 +315,12 @@ img {
 @media screen and (max-width: 767px) {
   .social-logo {
     display: none;
-    /* padding-top: 48vh;
-    width: 10px;
-    height: 10px; */
   }
 }
 
-/* 
+/*
 =======================================================
-==================Pagina Principal===================== 
+==================Pagina Principal=====================
 =======================================================
 */
 
@@ -345,7 +337,6 @@ img {
 
 .label-hi:hover::after {
   content: "About";
-  /* color: #77d970; */
 }
 
 .label-im::after {
@@ -354,7 +345,6 @@ img {
 
 .label-im:hover::after {
   content: "Project";
-  /* color: #77d970; */
 }
 
 .label-jb::after {
@@ -363,7 +353,6 @@ img {
 
 .label-jb:hover::after {
   content: "Contact";
-  /* color: #77d970; */
 }
 
 .animate {
@@ -500,9 +489,9 @@ img {
   }
 }
 
-/* 
+/*
 =======================================================
-===============Pagina Principal Movil=================== 
+===============Pagina Principal Movil===================
 =======================================================
 */
 
@@ -665,7 +654,6 @@ img {
 @media screen and (max-width: 767px) {
   .h-img {
     display: none;
-    /* margin: 20vh 0; */
   }
 }
 .h-img img {
@@ -728,7 +716,7 @@ img {
   box-shadow: none;
 }
 
-/* #cursor {
+#cursor {
   width: 1.7em;
   height: 1.7em;
   background-color: #ffffff;
@@ -739,10 +727,19 @@ img {
   pointer-events: none;
   border-radius: 50%;
   mix-blend-mode: difference;
+  transition: transform 0.1s linear;
 }
 
 #cursor.mini {
   transform: scale(0.7);
-  transition: all 0.1s linear;
 }
- */
+
+.is-hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  #cursor {
+    display: none;
+  }
+}
