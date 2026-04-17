@@ -332,27 +332,27 @@ img {
 }
 
 .label-hi::after {
-  content: "Hi,";
+  content: "Sobre";
 }
 
 .label-hi:hover::after {
-  content: "About";
+  content: "Sobre mí";
 }
 
 .label-im::after {
-  content: "I'm";
+  content: "mis";
 }
 
 .label-im:hover::after {
-  content: "Project";
+  content: "Proyectos";
 }
 
 .label-jb::after {
-  content: "Jasan";
+  content: "servicios";
 }
 
 .label-jb:hover::after {
-  content: "Contact";
+  content: "Contacto";
 }
 
 .animate {
@@ -741,5 +741,88 @@ img {
 @media screen and (max-width: 767px) {
   #cursor {
     display: none;
+  }
+}
+
+
+.home-intro {
+  position: fixed;
+  left: 5%;
+  bottom: 7%;
+  z-index: 2;
+  max-width: 420px;
+  border: 1px solid rgba(119, 217, 112, 0.4);
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.home-intro p {
+  margin-bottom: 8px;
+}
+
+.modern-section {
+  margin-top: 2.5rem;
+}
+
+.trend-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.trend-chip {
+  border: 1px solid rgba(119, 217, 112, 0.35);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #d2f8cf;
+  background: rgba(119, 217, 112, 0.08);
+}
+
+.project-card {
+  margin: 2rem 0;
+  border: 1px solid rgba(250, 119, 89, 0.28);
+  border-radius: 14px;
+  padding: 1.2rem;
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(4px);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-actions {
+  margin-top: 1rem;
+}
+
+.contact-card {
+  border: 1px solid rgba(250, 119, 89, 0.35);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 1.5rem 0;
+  background: rgba(250, 119, 89, 0.05);
+}
+
+.social-links-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .home-intro {
+    position: static;
+    margin: 2rem auto 0;
+    max-width: 86%;
+  }
+
+  .project-card {
+    margin-top: 1.2rem;
   }
 }
