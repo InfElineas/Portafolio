@@ -183,3 +183,14 @@ Se añadió la base para funcionalidades futuras:
 - Formulario de contacto cliente en `app-next/src/components/contact/contact-form.tsx` conectado a `/api/contact`.
 - Capa de validación reutilizable en `app-next/src/lib/contact-validation.ts`.
 - Preparación auth-ready con `app-next/src/middleware.ts` (rutas protegibles `/admin` y `/dashboard`).
+
+
+## Migración a Next.js (Fase 6)
+
+Se añadió la capa de cierre para calidad, deploy y transición:
+
+- `app-next/next.config.ts` con redirecciones legacy -> rutas Next.
+- `app-next/src/app/robots.ts` y `app-next/src/app/sitemap.ts` para SEO técnico.
+- `app-next/src/app/not-found.tsx` para fallback de rutas no válidas.
+- Workflow CI en `.github/workflows/next-quality.yml` para lint, typecheck y build.
+- Checklist operativo en `DEPLOY_PHASE6_CHECKLIST.md`.
