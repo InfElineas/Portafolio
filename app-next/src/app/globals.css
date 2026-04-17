@@ -145,3 +145,77 @@ a {
     order: -1;
   }
 }
+
+
+.page-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.page-eyebrow {
+  color: var(--primary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-title {
+  color: var(--accent);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.page-copy {
+  color: #dddddd;
+  line-height: 1.7;
+  max-width: 70ch;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.55rem;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip-item {
+  border: 1px solid rgba(119, 217, 112, 0.4);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  color: #d2f8cf;
+}
+
+.chip-item--accent {
+  border-color: rgba(250, 119, 89, 0.5);
+  color: #ffb29f;
+}
+
+.card-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card-next {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.contact-box-next {
+  border: 1px solid rgba(250, 119, 89, 0.45);
+  border-radius: 12px;
+  background: rgba(250, 119, 89, 0.06);
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.45rem;
+}

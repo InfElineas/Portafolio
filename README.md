@@ -151,3 +151,14 @@ La home de Next (`app-next/src/app/page.tsx`) ya está migrada con:
 - CTAs de navegación,
 - bloque de enlaces sociales,
 - estilos responsive específicos en `app-next/src/app/globals.css`.
+
+
+## Migración a Next.js (Fase 3)
+
+Se migraron las vistas principales en `app-next/src/app`:
+
+- `/about` con perfil, stack y skills,
+- `/projects` con cards y enlaces por proyecto,
+- `/contact` con copy de colaboración y canales de contacto.
+
+Además, se añadieron estilos reutilizables para estas secciones en `app-next/src/app/globals.css`.
