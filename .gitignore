@@ -1,5 +1,7 @@
 # Node / Next.js
 node_modules/
+.next/
+out/
 app-next/node_modules/
 app-next/.next/
 app-next/out/
